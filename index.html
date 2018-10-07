@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study</title>
+</head>
+<body>
+<input type="text"/>
+<p></p>
+</body>
+<script>
+    var inp=document.querySelector("input");
+    var p=document.querySelector("p");
+    var obj={
+
+    };
+    Object.defineProperty(obj,"userName",{
+        set(v){
+            inp.value=p.innerHTML=v;//双向绑定
+        },
+        get(){
+          return p.innerHTML;
+        }
+    });
+    inp.onkeyup=function () {
+        obj.userName=this.value
+    }
+</script>
+</html>
